@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>О себе</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            textarea {
+                height: 100px;
+                box-shadow: inset 3px 3px 6px rgba(50, 6, 82, 0.2);
+                font-family: var(--font-mono);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Искусство и креатив</h1>
+            <img src="profile picture.png" alt="Аватарка Махнёвой Марии" width="150" height="150"/>
+            <h2>Махнёва Мария</h2>
+        </header>
+
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#hobbies">Хобби</a></li>
+                <li><a href="#favorite-places">Любимые места</a></li>
+                <li><a href="#contact">Обратная связь</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <aside style="background-color: rgba(255, 255, 255, 0.7);">
+                <h3>Любимое направление в&nbsp;искусстве</h3>
+                <p><b>Импрессионизм</b> – это художественное направление, зародившееся во Франции во второй половине XIX века. Название происходит от французского слова <i>impression</i> – «<strong>впечатление</strong>».</p>
+                <a href="https://ru.wikipedia.org/wiki/Импрессионизм">Подробнее об импрессионизме</a>
+            </aside>
+
+            <main>
+                <section id="skills">
+                    <h3>Навыки</h3>
+                    <ul>
+                        <li>Академический рисунок и живопись</li>
+                        <li>Цифровая иллюстрация</li>
+                        <li>Колористика и цветовая теория</li>
+                        <li>Типографика и работа со шрифтами</li>
+                    </ul>
+                </section>
+
+                <section id="projects">
+                    <h3>Проекты</h3>
+                    <ol>
+                        <li class="project">Иллюстрация "<em>Карман полный ржи</em>"</li>
+                        <li class="project"><span class="favorite-project">Выставка "<em>Портреты близких людей</em>"<span class="favorite">&#10084;</span></span></li>
+                        <li class="project">Работа "<em>Любимый город</em>"</li>
+                    </ol>
+                </section>            
+
+                <section id="hobbies">
+                    <h3>Хобби</h3>
+                    <div class="hobby-cards">
+
+                        <article class="hobby-card">
+                            <img src="drawing.png" alt="Рисование" width="90" height="90"/>
+                            <div class="hobby-text">
+                                <h4>Рисование</h4>
+                                <p>Создаю скетчи и иллюстрации в разных техниках.</p>
+                            </div>
+                        </article>
+
+                        <article class="hobby-card">
+                            <img src="ceramics.png" alt="Керамика" width="90" height="90"/>
+                            <div class="hobby-text">
+                                <h4>Керамика</h4>
+                                <p>Леплю из глины посуду и декоративные фигурки.</p>
+                            </div>
+                        </article>
+
+                        <article class="hobby-card">
+                            <img src="photo.png" alt="Фотография" width="90" height="90"/>
+                            <div class="hobby-text">
+                                <h4>Фотография</h4>
+                                <p>Люблю снимать городские пейзажи и портреты.</p>
+                            </div>
+                        </article>
+                
+                    </div>
+                </section>
+
+                <section id="favorite-places">
+                    <h3>Любимые места</h3>
+                    <div class="places-grid">
+                    
+                        <figure class="place-card">
+                            <img src="Moscow.png" alt="Московский Кремль"/>
+                            <figcaption>
+                                <h4>Москва</h4>
+                                <p lang="ru">Столица с богатой историей.</p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="place-card">
+                            <img src="SPb.png" alt="Разводные мосты Санкт-Петербурга"/>
+                            <figcaption>
+                                <h4>Санкт-Петербург</h4>
+                                <p lang="ru">Северная столица с разводными мостами и белыми ночами.</p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="place-card">
+                            <img src="Novosibirsk.png" alt="Оперный театр в Новосибирске"/>
+                            <figcaption>
+                                <h4>Новосибирск</h4>
+                                <p lang="ru">Столица Сибири с самым большим оперным театром страны.</p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="place-card">
+                            <img src="Tomsk.png" alt="Деревянное зодчество Томска"/>
+                            <figcaption>
+                                <h4>Томск</h4>
+                                <p lang="ru">Город деревянного зодчества и студенческих времён.</p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="place-card">
+                            <img src="Kazan.png" alt="Казанский кремль"/>
+                            <figcaption>
+                                <h4>Казань</h4>
+                                <p lang="ru">Город с древним кремлём и богатой культурой.</p>
+                            </figcaption>
+                        </figure>
+                    
+                        <figure class="place-card">
+                            <img src="Ekaterinburg.png" alt="Храм на Крови в Екатеринбурге"/>
+                            <figcaption>
+                                <h4>Екатеринбург</h4>
+                                <p lang="ru">Город на границе Европы и Азии.</p>
+                            </figcaption>
+                        </figure>
+                    
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <form id="contact">
+            <p>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required/>
+            </p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="user@gmail.com" required/>
+            </p>
+
+            <p>
+                <label for="comment">Сообщение:</label>
+                <textarea id="comment" name="comment" placeholder="Задайте мне вопрос." required></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Отправить</button>
+            </p>
+        </form>
+
+        <footer>
+            <p>Copyright © <time datetime="2026">2026</time></p>
+        </footer>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
