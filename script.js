@@ -5,14 +5,39 @@ console.log("Имя:", name);
 console.log("Температуры:", temperatures);
 
 function findHottestDay(temps) {
-    let max = temps[0]; 
+    let maxTemp = temps[0]; 
     for (let i = 1; i < temps.length; i++) {
-        if (temps[i] > max) {
-            max = temps[i];
+        if (temps[i] > maxTemp) {
+            maxTemp = temps[i];
         }
     }
-    return max; 
+    return maxTemp; 
 }
 
+function filterWarmDays(temps) {
+    let warmDays = [];
+    for (let i = 0; i < temps.length; i++) {
+        if (temps[i] > 20) {
+            warmDays.push(temps[i]);
+        }
+    }
+    return warmDays;
+}
+
+function calculateAverageTemperature(temps) {
+    let sum = 0;
+    for (let i = 0; i < temps.length; i++) {
+        sum += temps[i];
+    }
+    let averageTemp = sum / temps.length;
+    return averageTemp;
+}
+
+
 const hottest = findHottestDay(temperatures);
+const warmDays = filterWarmDays(temperatures);
+const average = calculateAverageTemperature(temperatures);
+
 console.log("Максимальная температура:", hottest, "°C");
+console.log("Тёплые дни (> 20 °C):", warmDays);
+console.log("Средняя температура:", averageTemp.toFixed(1), "°C");
