@@ -1,3 +1,5 @@
+'use strict';
+
 const name = prompt("Как вас зовут?", "Ценитель искусства");
 const temperatures = [22, 10, 25, 8, 31, 17, 30];
 
@@ -24,7 +26,7 @@ function filterWarmDays(temps) {
     return warmDays;
 }
 
-function calculateAverageTemperature(temps) {
+function calculateAverageTemp(temps) {
     let sum = 0;
     for (let i = 0; i < temps.length; i++) {
         sum += temps[i];
@@ -53,8 +55,16 @@ console.log("Средняя температура в холодные дни:",
 
 const maximumTemperature = findHottestDay(temperatures);
 const countWarmDays = filterWarmDays(temperatures);
-const averageTemperature = calculateAverageTemperature(temperatures);
+const averageTemperature = calculateAverageTemp(temperatures);
 
 console.log("Максимальная температура:", maximumTemperature, "°C");
 console.log("Тёплые дни (> 20 °C):", countWarmDays);
 console.log("Средняя температура по всем дням:", averageTemperature.toFixed(1), "°C");
+
+alert(
+    "Здравствуй, " + name + "!\n" +  "Средняя температура за период – " + averageTemperature.toFixed(1) + " °С, " + "было " + countWarmDays.length + " тёплых дней."
+);
+
+if (maximumTemperature >= 30) {
+    console.log("Рекомендуется предусмотреть навесы и воду для гостей.");
+}
