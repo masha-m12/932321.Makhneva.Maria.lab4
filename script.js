@@ -1,4 +1,4 @@
-const name = prompt("Как вас зовут?");
+const name = prompt("Как вас зовут?", "Ценитель искусства");
 const temperatures = [22, 10, 25, 8, 31, 17, 30];
 
 console.log("Имя:", name);
@@ -33,11 +33,28 @@ function calculateAverageTemperature(temps) {
     return averageTemp;
 }
 
+let coldCount = 0;
+let coldSum = 0;
 
-const hottest = findHottestDay(temperatures);
-const warmDays = filterWarmDays(temperatures);
-const average = calculateAverageTemperature(temperatures);
+for (let i = 0; i < temperatures.length; i++) {
+    if (temperatures[i] <= 10) {
+        coldCount++;
+        coldSum += temperatures[i];
+    }
+}
 
-console.log("Максимальная температура:", hottest, "°C");
-console.log("Тёплые дни (> 20 °C):", warmDays);
-console.log("Средняя температура:", averageTemp.toFixed(1), "°C");
+let coldAverageTemp = 0;
+if (coldCount > 0) {
+    coldAverageTemp = coldSum / coldCount;
+}
+
+console.log("Количество холодных дней (≤ 10 °C):", coldCount);
+console.log("Средняя температура в холодные дни:", coldAverageTemp.toFixed(1), "°C");
+
+const maximumTemperature = findHottestDay(temperatures);
+const countWarmDays = filterWarmDays(temperatures);
+const averageTemperature = calculateAverageTemperature(temperatures);
+
+console.log("Максимальная температура:", maximumTemperature, "°C");
+console.log("Тёплые дни (> 20 °C):", countWarmDays);
+console.log("Средняя температура по всем дням:", averageTemperature.toFixed(1), "°C");
