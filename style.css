@@ -35,6 +35,11 @@ header img {
     max-width: 150px;
     object-fit: cover;
 }
+.author-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 13px 0;
+}
 .content {
     display: flex;
     gap: 40px;
@@ -59,6 +64,18 @@ form {
     padding: 5px 10px 5px;
     max-width: 850px;
     margin: 20px auto;
+}
+input, textarea {
+    width: 100%;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--main-color);
+    background-color: var(--accent-color);
+    border: 2px solid var(--main-color);
+}
+input:focus, textarea:focus {
+    outline: 2px solid var(--main-color);
 }
 button {
     background-color: var(--main-color);
@@ -156,8 +173,7 @@ a:visited {
     display: flex;
     align-items: center;
     gap: 12px;
-    flex: 1 1 240px;
-    max-width: 380px;
+    flex: 1 1 calc((100% - 30px) / 3);
     padding: 12px;
     border: 2px solid var(--main-color);
     background-color: rgba(255, 255, 255, 0.7);
@@ -168,14 +184,14 @@ a:visited {
     flex-shrink: 0;
     background-color: var(--bg-color);
 }
-.hobby-text h4 {
+.hobby-text h3 {
     margin: 0 0 6px;
     color: var(--main-color);
-    font-size: 16px;
+    font-size: 17px;
 }
 .hobby-text p {
     margin: 0;
-    font-size: 13px;
+    font-size: 14px;
 }
 .places-grid {
     display: grid;
@@ -210,13 +226,13 @@ a:visited {
     );
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
-.place-card figcaption h4 {
+.place-card figcaption h3 {
     margin: 0 0 6px;
     font-size: 17px;
 }
 .place-card figcaption p {
     margin: 0;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 @media (max-width: 992px) {
@@ -234,14 +250,12 @@ a:visited {
         grid-template-columns: repeat(2, 1fr);
     }
     .hobby-card {
-        flex: 1 1 calc(50% - 15px);
-        max-width: none;
+        flex: 1 1 calc((100% - 15px) / 2);
     }
 }
 @media (max-width: 600px) {
     .hobby-card {
         flex: 1 1 100%;
-        max-width: 100%;
     }
     .places-grid {
         grid-template-columns: 1fr;
